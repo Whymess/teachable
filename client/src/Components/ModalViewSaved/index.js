@@ -1,7 +1,7 @@
 import React from "react";
 import { GemPaper } from "../../Components";
 
-const ModalViewSaved = ({savedGems, removeSavedGems}) => (
+const ModalViewSaved = ({savedGems}) => (
       <div
         className="modal fade"
         id="exampleModal"

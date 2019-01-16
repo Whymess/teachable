@@ -136,7 +136,7 @@ export default class Application extends Component {
 
         <ModalViewSaved
           savedGems={savedGems}
-          removeSavedGems={this.removeSavedGems}
+          
         />
       </div>
     );
