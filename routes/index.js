@@ -39,13 +39,12 @@ router.delete("/savedGems/:sha", function(req, res, next) {
       "utf-8",
       function(err) {
         if (err) {
-          res.send(err)
+          res.send(err);
         } else {
-          res.send({msg: 'gem removed'})
+          res.send({ msg: "gem removed" });
         }
       }
     );
-
   });
 });
 
@@ -60,14 +59,12 @@ router.post("/savedGems", function(req, res, next) {
       "utf-8",
       function(err) {
         if (err) {
-          res.send(err)
+          res.send(err);
         } else {
-          res.send({msg: 'gem saved'})
+          res.send({ msg: "gem saved" });
         }
       }
     );
-
-    
   });
 });
 
