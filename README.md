@@ -7,5 +7,4 @@ To deploy to heruoku.
 1. npm run heroku-postbuild
 
 
----- Architecture ---
-Each component is separated accordingly within their respective folders. For the front end, the application component contains most of logic.  I felt that using Redux was unnecessary for this application, because state could be contained within the parent component.  The only external libraries I used was material design and bootstrap to help style the layout. The backend is uses express.js and data is being saved to Database.json as a "mock" database. 
+Each component is within their respective folders. The application component is essentially the "brain" of the application.  I felt that using Redux or another state management library was unnecessary. The only external libraries I used was material design and bootstrap. The backend uses a fake database,  the database.json file. 
