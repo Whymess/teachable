@@ -1,0 +1,33 @@
+{
+  "name": "frontend-takehome-parcel",
+  "version": "0.0.0",
+  "description": "Teachable frontend takehome with Parcel.",
+  "main": "server.js",
+  "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "build": "./node_modules/.bin/parcel build ./index.html",
+    "dev": "concurrently './node_modules/.bin/parcel ./index.html' 'node ./server'",
+    "start": "NODE_ENV=production nodemon ./server",
+    "test": "echo 'Your test command goes here'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UseFedora/frontend-takehome-parcel.git"
+  },
+  "author": "Teachable",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/UseFedora/frontend-takehome-parcel/issues"
+  },
+  "homepage": "https://github.com/UseFedora/frontend-takehome-parcel#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.9",
+    "parcel": "^1.9.7",
+    "request": "^2.88.0"
+  }
+}
