@@ -17,7 +17,8 @@ class GemPaper extends Component {
     super(props);
     this.state = {
       saved: false,
-      data: ""
+      data: "",
+      error: ""
     };
   }
 
@@ -42,7 +43,7 @@ class GemPaper extends Component {
       .then(res => res.json())
       .then(res => {
         this.setState({ saved: true });
-      });
+      })
   };
 
   removeSavedGem = sha => {
