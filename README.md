@@ -8,3 +8,5 @@ To deploy to heruoku.
 
 
 Each component is within their respective folders. The application component is essentially the "brain" of the application.  I felt that using Redux or another state management library was unnecessary. The only external libraries I used was material design and bootstrap. The backend uses a fake database,  the database.json file. Lastly, I separated out the routes and the express server to help with maintainability. 
+
+Live link here https://pure-plateau-76179.herokuapp.com/ Load times may differ, its the free version of heroku
