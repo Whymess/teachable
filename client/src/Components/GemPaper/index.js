@@ -23,11 +23,15 @@ class GemPaper extends Component {
   }
 
   componentDidMount() {
-    fetch(`/savedGems`)
+    let { sha } = this.props;
+    fetch(`/findSavedGems/${sha}`)
       .then(res => res.json())
-      .then(savedGems => {
-        if (savedGems.find(g => g.sha === this.props.sha)) {
-          this.setState({ saved: true });
+      .then(res => {
+        let { msg } = res;
+        if (msg === "found") {
+          this.setState({
+            saved: true
+          });
         }
       });
   }
@@ -43,7 +47,7 @@ class GemPaper extends Component {
       .then(res => res.json())
       .then(res => {
         this.setState({ saved: true });
-      })
+      });
   };
 
   removeSavedGem = sha => {

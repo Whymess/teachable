@@ -26,6 +26,23 @@ router.get("/savedGems", function(req, res) {
   });
 });
 
+router.get("/findSavedGems/:sha", function(req, res) {
+  fs.readFile("./database.json", "utf-8", function(err, data) {
+    var arrayOfObjects = JSON.parse(data);
+    var modifiedListOfObjects = arrayOfObjects.filter((el, i) => {
+      return el["sha"] === req.params.sha;
+    });
+
+    if (modifiedListOfObjects.length === 1) {
+      res.send({ msg: "found" });
+      res.status(200);
+    } else {
+      res.send({ msg: "not found" });
+      res.status(200);
+    }
+  });
+});
+
 router.delete("/savedGems/:sha", function(req, res, next) {
   fs.readFile("./database.json", "utf-8", function(err, data) {
     var arrayOfObjects = JSON.parse(data);

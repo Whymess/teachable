@@ -8,16 +8,13 @@ import {
 } from "../../Components/";
 
 export default class Application extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchTerm: "",
-      error: "",
-      response: [],
-      loading: false,
-      savedGems: []
-    };
-  }
+  state = {
+    searchTerm: "",
+    error: "",
+    response: [],
+    loading: false,
+    savedGems: []
+  };
 
   handleChange = e => {
     let { value } = e.target;
@@ -134,10 +131,7 @@ export default class Application extends Component {
           {this.renderResponse()}
         </div>
 
-        <ModalViewSaved
-          savedGems={savedGems}
-          
-        />
+        <ModalViewSaved savedGems={savedGems} />
       </div>
     );
   }
